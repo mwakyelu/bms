@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMS | Login</title>
+    <link rel="shortcut icon" href="../img/blood-donation-hands.png" type="image">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar navbar-light bg-dark">
+            <div class="container-fluid m-auto">
+                <h2 class="text-white text-center m-0 m-auto">BLOOD BANK MANAGEMENT SYSTEM</h2>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="home" class="bg-cover mainSection">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="col-md-6 m-auto">
+                    <div class="card loginCard shadow-lg bg-body rounded">
+                        <div class="card block">
+                            <img class="loginImg" src="./img/blood-donation-hands.png" alt="">
+                            <form class="loginForm needs-validation" action="" novalidate>
+                                <div class="form-group">
+                                    <label for="" class="form-label">Username</label>
+                                    <input type="text" class="form-control" placeholder="Enter Username" required>
+                                    <div class="invalid-feedback">
+                                        Please Enter a valid Username
+                                      </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="form-label">Password</label>
+                                    <input type="password" class="form-control" placeholder="Enter password" required>
+                                    <div class="invalid-feedback">
+                                        Please Enter a valid Password
+                                      </div>
+                                </div>
+                                <div class="col mt-4 mb-2">
+                                    <a href="pages/dashboard.html" class="loginButton btn">Login</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="/js/main.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

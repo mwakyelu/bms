@@ -1,0 +1,323 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMS | Dashboard</title>
+    <link rel="shortcut icon" href="../img/blood-donation-hands.png" type="image">
+    <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="topBar">
+            <ul class="nav justify-content-end align-items-center bg-light p-1 shadow-sm bg-body rounded">
+                <li class="nav-item">
+                  <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#addHospital">
+                    Add Hospital
+                    <i class="fas fa-plus"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#addUser">
+                        Add User
+                        <i class="fas fa-plus"></i>
+                    </a>
+                </li>  
+                <li class="nav-item">
+                    <a href="#">
+                        <i class="fas fa-bell fs-4"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <div class=" border rounded-circle">
+                        <i class="fas fa-user p-3 fs-4"></i>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="row container-fluid">
+            <div class="col-3">
+               <nav id="sideBar" class="sideBar">
+                   <a href="#" class="navbar-brand text-decoration-none">
+                       <div class="d-flex justify-content-center align-items-center">
+                            <img src="../img/blood-donation-bank.png" class="logo" style="width: 50px; height: 50px;" alt="">
+                            <span class="text-danger fw-bold">BMS</span>
+                       </div>
+                   </a>
+                   <ul class="nav flex-column verticalNav">
+                        <li class="nav-item">
+                            <a href="dashboard.html" class="nav-link d-flex justify-content-center align-items-center">
+                                <i class="fas fa-home fa-2x"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="hospitals.html" class="nav-link d-flex justify-content-center align-items-center">
+                               <i class="fas fa-hospital fa-2x"></i>
+                               <span>Hospitals</span>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="users.html" class="nav-link d-flex justify-content-center align-items-center">
+                                <i class="fas fa-user-alt fa-2x"></i>
+                                <span>Users</span>
+                            </a>
+                         </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link d-flex justify-content-center align-items-center">
+                                <i class="fas fa-database fa-2x"></i>
+                                <span>Blood Bank</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="donors.html" class="nav-link active d-flex justify-content-center align-items-center">
+                                <i class="fas fa-users fa-2x"></i>
+                                <span>Donors</span>
+                            </a>
+                        </li>
+                   </ul>
+               </nav>
+            </div>
+            <div class="col-9">
+                <section class="main-section mt-4">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card text-dark bg-light mb-3 shadow mb-5 bg-body rounded" style="max-width: 18rem;">
+                                <div class="card-body row">
+                                    <div class="card-body-text col-7">
+                                        <h5 class="card-title">45</h5>
+                                        <p class="card-text">Total Hospitals</p>
+                                    </div>
+                                    <div class="card-body-icon text-center col-5 d-flex justify-content-center align-items-center">
+                                        <i class="fas fa-hospital fa-3x text-info"></i>
+                                        <i class="fas fa-hospital fa-3x text-info"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card text-dark bg-light mb-3 shadow mb-5 bg-body rounded" style="max-width: 18rem;"> 
+                                <div class="card-body row">
+                                    <div class="card-body-text col-7">
+                                        <h5 class="card-title">423</h5>
+                                        <p class="card-text">Total Donations</p>
+                                    </div>
+                                    <div class="card-body-icon text-center col-5 d-flex justify-content-center align-items-center">
+                                        <i class="fas fa-hand-holding-water fa-3x text-danger"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card text-dark bg-light mb-3 shadow mb-5 bg-body rounded" style="max-width: 18rem;">           
+                                <div class="card-body row">
+                                    <div class="card-body-text col-7">
+                                        <h5 class="card-title">300</h5>
+                                        <p class="card-text">Total Recipients</p>
+                                    </div>
+                                    <div class="card-body-icon text-center col-5 d-flex justify-content-center align-items-center">
+                                        <i class="fas fa-procedures fa-3x  text-success"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="row">
+                        <table class="table table-hover shadow mb-5 bg-body rounded ">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Blood Type</th>
+                                    <th scope="col">Donor Number</th>
+                                    <th scope="col">Personal Info</th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>John Sanga</td>
+                                    <td>B+</td>
+                                    <td>67</td>
+                                    <td><a class="btn-link" href="#">View</a></td>
+
+                                    <td>
+                                        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#editRating"><i class="fas fa-edit"></i></button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#editRating"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Alex Simkoko</td>
+                                    <td>B</td>
+                                    <td>67</td>
+                                    <td><a class="btn-link" href="#">View</a></td>
+
+                                    <td>
+                                        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#editRating"><i class="fas fa-edit"></i></button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#editRating"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Daniel Lukamba</td>
+                                    <td>A-</td>
+                                    <td>67</td>
+                                    <td><a class="btn-link" href="#">View</a></td>
+                                    <td>
+                                        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#editRating"><i class="fas fa-edit"></i></button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#editRating"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Add Hospital Modal -->
+        <div class="modal fade" id="addHospital" tabindex="-1"  aria-hidden="true">
+            <form id="member-form" class="needs-validation" novalidate>
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title  fw-bold" id="addHospitalLabel"> Ongeza Mwanakikundi</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row g-3 mb-3">
+                                <label for="fullName" class="form-label">Jina Kamili </label>
+                                <div class="col-lg-4">
+                                    <input type="text" class="form-control" id="fullName" placeholder="Jina la Kwanza" required>
+                                </div>
+                                <div class="col-lg-4">
+                                    <input type="text" class="form-control" id="fullName" placeholder="Jina la Pili" required>
+                                </div>
+                                <div class="col-lg-4">
+                                    <input type="text" class="form-control" id="fullName" placeholder="Jina la Ukoo" required>
+                                </div>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-lg-6 mb-3">
+                                    <label for="address" class="form-label">Anuani</label>
+                                    <input type="text" class="form-control" id="address" placeholder="Mfano,Dar-Es-Salaam, kinondoni" required>
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label for="passSize" class="form-label">Picha ya Wasifu</label>
+                                    <small class="text-muted">(passport size)</small>
+                                    <input class="form-control" type="file" id="passSize" required>
+                                </div>
+                            </div>
+                            <div class="row g-3 mb-3">
+                                <div class="col-lg-6">
+                                    <label for="nida" class="form-label">Namba ya NIDA</label>
+                                    <input type="text" class="form-control" id="nida" placeholder="Mfano,2000010170008920101001" onkeypress="numericInput(event)" required>
+                                </div>
+                                <div class="col-lg-6">
+                                    <label for="role" class="form-label">Nafasi ya Mwanakikundi</label>
+                                    <select id="role" class="form-select" required>
+                                        <option value="">Chagua</option>
+                                        <option value="mtunza hazina">Mtunza hazina </option>
+                                        <option value="katibu">Katibu </option>
+                                        <option value="mwanakikundi">Mwanakikundi </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">          
+                                <label for="description" class="form-label">Maelezo mafupi ya Mwanakikundi</label>
+                                <textarea class="form-control" id="description" rows="3" placeholder="Toa maelezo mafupi kuhusu mwanachama huyu" required></textarea>
+                            </div> 
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Ongeza</button>
+                        </div> 
+                        </div>  
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Add Users -->
+        <div class="modal fade" id="addUser" tabindex="-1"  aria-hidden="true">
+            <form id="member-form" class="needs-validation" novalidate>
+                <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title  fw-bold" id="addUserLabel"> Ongeza Mwanakikundi</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row g-3 mb-3">
+                                <label for="fullName" class="form-label">Jina Kamili </label>
+                                <div class="col-lg-4">
+                                    <input type="text" class="form-control" id="fullName" placeholder="Jina la Kwanza" required>
+                                </div>
+                                <div class="col-lg-4">
+                                    <input type="text" class="form-control" id="fullName" placeholder="Jina la Pili" required>
+                                </div>
+                                <div class="col-lg-4">
+                                    <input type="text" class="form-control" id="fullName" placeholder="Jina la Ukoo" required>
+                                </div>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-lg-6 mb-3">
+                                    <label for="address" class="form-label">Anuani</label>
+                                    <input type="text" class="form-control" id="address" placeholder="Mfano,Dar-Es-Salaam, kinondoni" required>
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label for="passSize" class="form-label">Picha ya Wasifu</label>
+                                    <small class="text-muted">(passport size)</small>
+                                    <input class="form-control" type="file" id="passSize" required>
+                                </div>
+                            </div>
+                            <div class="row g-3 mb-3">
+                                <div class="col-lg-6">
+                                    <label for="nida" class="form-label">Namba ya NIDA</label>
+                                    <input type="text" class="form-control" id="nida" placeholder="Mfano,2000010170008920101001" onkeypress="numericInput(event)" required>
+                                </div>
+                                <div class="col-lg-6">
+                                    <label for="role" class="form-label">Nafasi ya Mwanakikundi</label>
+                                    <select id="role" class="form-select" required>
+                                        <option value="">Chagua</option>
+                                        <option value="mtunza hazina">Mtunza hazina </option>
+                                        <option value="katibu">Katibu </option>
+                                        <option value="mwanakikundi">Mwanakikundi </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">          
+                                <label for="description" class="form-label">Maelezo mafupi ya Mwanakikundi</label>
+                                <textarea class="form-control" id="description" rows="3" placeholder="Toa maelezo mafupi kuhusu mwanachama huyu" required></textarea>
+                            </div> 
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Ongeza</button>
+                        </div> 
+                        </div>  
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/main.js"></script>
+    <script src="../bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
